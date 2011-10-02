@@ -1,0 +1,14 @@
+    <div data-role="header">
+      <h1>Listing todos</h1>
+      <%= link_to 'Add', new_todo_path, "data-icon" => "plus", "class" => "ui-btn-right" %>
+    </div>
+
+    <div data-role="content">
+      <ul data-role="listview">
+      <% @todos.each do |todo| %>
+        <li data-role="list-divider" style="padding: 0.1em 15px;"><%= todo.due %></li>
+        <li><%= link_to todo.task ,todo %></li>
+      <% end %>
+      </ul>
+    </div>
+  </div>

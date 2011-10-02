@@ -1,0 +1,9 @@
+<div data-role="header">
+  <%= link_to 'Back', todo_path(@todo), "data-icon"=>"arrow-l" %>
+  <h1>Todoの変更</h1>
+  <%= link_to 'Delete', todo_path(@todo), :confirm => "#{@todo.task} を削除してよいですか?", :method => :delete, "data-icon"=>"delete" %>
+</div>
+
+<div data-role="content">
+  <%= render 'form' %>
+</div>
